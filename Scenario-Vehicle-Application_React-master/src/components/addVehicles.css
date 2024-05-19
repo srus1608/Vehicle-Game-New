@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    padding: 19px 44px 2px;
+    justify-content: space-between;
+}
+
+.modal-body .grid-container {
+    display: inline-grid;
+}
+
+.addVehiclesContainer {
+    margin-top: 5.5rem;
+}
+.grid-item div {
+    text-align: initial;
+}
+
+select option {
+    color: grey;
+}
+
+.add-vehicle-form {
+    color: white;
+    grid-template-columns: auto auto auto;
+    margin: 78px;
+    padding: 63px;
+    background: var(--dark);
+    box-sizing: border-box;
+    box-shadow: 9px 16px 29px 2px rgba(0,0,0,0.58);
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 720px) {
+    .add-vehicle-form {
+        margin: 78px 0;
+        padding: 63px 0;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .add-vehicle-form {
+        grid-template-columns: auto auto;
+    }
+}

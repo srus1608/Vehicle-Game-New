@@ -1,0 +1,389 @@
+@import-normalize; /* bring in normalize.css styles */
+
+:root {
+  --green : #4CAF50; 
+  --orange : #ffa500;
+  --white : #ffffff;
+  --dark : #413F42;
+  --darkgrey : #2c2b2b;
+  --grey : #b3b3b3;
+  --black : #000000;
+  --red : #e90303;
+  --errorRed : #eb5656;
+  --yellow : #ffa500;
+  --blue : #4f99ff;
+  --darkBlue : #1e54a0;
+
+  --brown : #967E76;
+  --lightBrown : #D7C0AE;
+  --light : #EEE3CB;
+  --lightBlue : #B7C4CF;
+}
+
+.App {
+  text-align: center;
+}
+
+option {
+  height: 1rem !important;
+  margin: 1rem !important;
+  line-height: 1rem !important;
+  padding: 5rem !important;
+  background: var(--darkgrey) !important;
+  font-size: 17px;
+}
+
+input, select {
+  width: 13rem;
+  font-size: 12px !important;
+  padding: 8px 13px !important;
+  display: inline-block;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: var(--darkgrey);
+  color: var(--white);
+}
+
+.ui.form .field {
+  margin: 0 0 2em !important;
+}
+
+.button {
+  border: none;
+    border-radius: 5px;
+    color: var(--white);
+    padding: 12px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.error {
+  color: var(--errorRed);
+  text-align: left !important;
+  margin-left: -18px;
+}
+
+.green-btn {
+  background: var(--green);
+}
+
+.orange-btn {
+  background: var(--orange);
+}
+
+.green-btn:hover, .blue-btn:hover {
+  color: var(--white) !important;
+}
+
+.red-btn {
+  background-color: var(--red);
+}
+
+.blue-btn {
+  background-color: var(--blue);
+}
+
+.trash-icon:hover {
+  color: var(--red);
+}
+
+.edit-icon:hover {
+  color: var(--yellow);
+}
+
+.add-icon:hover {
+  color: var(--green);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+#scenarios, .vehicles {
+    
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#scenarios td, #scenarios th, .vehicles td, .vehicles th {
+  padding: 15px;
+}
+
+#scenarios tr, .vehicles tr{
+  background-color: #f2f2f2;
+  color: var(--black);
+  border: 1px solid var(--black); 
+}
+
+#scenarios tr:hover, .vehicles tr:hover {background-color: #ddd;}
+
+#scenarios th, .vehicles th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: var(--dark);
+  color: white;
+}
+
+.isInvisible {
+  display: none;
+}
+
+.main-container {
+  margin-top: 3.5rem;
+}
+
+.info {
+  color: var(--black);
+}
+
+
+
+/* Navbar STARTS---------------- */
+
+.topnav {
+  background-color: #0077b6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#brand {
+  scale: 1.8;
+}
+
+.topnav a, #brand {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #dfeef1;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #a8d1da;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+  float: right;
+  position: fixed;
+  top: 6px;
+  right: 7px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav .icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive .icon {
+    display: block;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #home {
+    margin-top: 50px;
+  }
+}
+
+/* ----------------NAVBAR ENDS */
+
+
+/* ADD_SCENARIO STARTS---------------- */
+
+.scenario {
+  width: 35rem;
+  background: var(--dark);
+  padding: 4rem 5rem;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 9px 16px 29px 2px rgba(0,0,0,0.58);
+}
+
+.formContainer .field {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.scenario label {
+  color: var(--white) !important;
+  scale: 1.2;
+}
+
+.name, .time {
+  flex: 1;
+}
+
+.addScenarioContainer {
+  margin-top: 5.5rem;
+}
+
+/* ----------------ADD_SCENARIO ENDS */
+
+
+
+/* ALL_SCENARIO STARTS---------------- */
+
+#all-scenarios {
+  margin: 0 3rem 5rem;
+  box-shadow: 9px 16px 29px 2px rgba(0,0,0,0.58);
+}
+
+.all-scenario-header {
+  grid-template-columns: auto auto;
+}
+
+/* ----------------ALL_SCENARIO ENDS */
+
+/* BACKDROP STARTS---------------- */
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------BACKDROP ENDS */
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 765px) {
+  .all-scenario-header .button {
+    padding: 11px 25px;
+    font-size: 12px;
+  }
+
+  .all-scenario-header {
+    padding: 19px 0 2px 0 !important;
+  }
+}
+
+
+
+@media only screen and (max-width: 680px) {
+  .home .vehicles, #scenarios {
+    display: block !important;
+    overflow-x: scroll;
+    max-width: -webkit-fill-available !important;
+    margin-top: 13px !important;
+  }
+
+  #all-scenarios {
+    margin: 0;
+  }
+
+  .all-scenario-header .grid-item h2 {
+    font-size: 21px !important;
+  }
+
+}
+
+
+
+
+/* MODAL start -------------------*/
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal.enter-done {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal.exit {
+  opacity: 0;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-200px);
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.modal.exit .modal-content {
+  transform: translateY(-200px);
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/*--------------- MODAL ends*/

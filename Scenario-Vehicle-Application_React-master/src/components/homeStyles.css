@@ -1,0 +1,66 @@
+.home {
+    /* height: 78rem; */
+    position: relative;
+    margin-top: 3.5rem;
+    background: var(--black);
+    padding-top: 1rem;
+  }
+  
+  .home .info {
+    color: var(--white);
+  }
+
+
+  /* .home select {
+    width: 13.4rem !important;
+  } */
+  
+  #homeSelect, #homeSelect option {
+    font-size: 16px !important;
+    width: fit-content !important;
+    padding: 12px 20px !important;
+    display: inline-block;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--darkgrey);
+    color: var(--white);
+  }
+  
+  .home .vehicles {
+    width: 94.7%;
+    margin: 1rem auto 0 auto;
+  }
+  
+  .home .info {
+    margin-top: 70px;
+  }
+  
+  .carGrid {
+    background: conic-gradient(from 90deg at 1px 1px,#0000 90deg,#4735c6 0) 
+    0 0/60px 60px;;
+    position: relative;
+    margin: 3rem auto;
+    height: 51.5rem;
+  }
+
+  .controllerBtns {
+    top: -34px;
+    position: absolute;
+    left: 50%;
+  }
+  
+  .enlargeBtn {
+    position: absolute;
+    color: white;
+    right: 7px;
+    top: -28px;
+    opacity: 0.7;
+    cursor: grab;
+  }
+  
+  .enlargeBtn:hover {
+    opacity: 1;
+  }
+  
+  
